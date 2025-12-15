@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 
 const productSchema = new mongoose.Schema({
-  vendor: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  _id: String, // Allow custom string IDs (e.g., 'p1')
+  vendor: { type: String, ref: "User" }, // Changed to String to match User._id
   name: String,
   price: Number,
   category: String,

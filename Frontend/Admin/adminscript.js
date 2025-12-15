@@ -425,5 +425,44 @@ function renderVendors(container) {
 }
 
 function renderSettings(container) {
-    container.innerHTML = "<h1>Settings</h1><p>System settings here...</p>";
+    container.innerHTML = `
+        <h1>Settings</h1>
+        <div class="card">
+            <h3>Database Synchronization</h3>
+            <p>Sync your local data (LocalStorage) to the central MongoDB Database.</p>
+            <button class="btn btn-primary" onclick="syncToDatabase()">Sync Now</button>
+            <p id="syncStatus" style="margin-top:10px;"></p>
+        </div>
+    `;
+}
+
+window.syncToDatabase = async function () {
+    const status = document.getElementById("syncStatus");
+    status.innerText = "Syncing...";
+    status.style.color = "blue";
+
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const products = JSON.parse(localStorage.getItem('products')) || [];
+    const orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+    try {
+        const res = await fetch('http://localhost:3000/api/backup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ users, products, orders })
+        });
+
+        const data = await res.json();
+        if (data.success) {
+            status.innerText = `Success! Synced ${data.results.users.upserted + data.results.users.matched} Users, ${data.results.products.upserted + data.results.products.matched} Products, ${data.results.orders.upserted + data.results.orders.matched} Orders.`;
+            status.style.color = "green";
+            alert("Database Sync Completed!");
+        } else {
+            throw new Error(data.message);
+        }
+    } catch (err) {
+        console.error("Sync Error:", err);
+        status.innerText = "Sync Failed: " + err.message;
+        status.style.color = "red";
+    }
 }

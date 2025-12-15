@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const orderSchema = new mongoose.Schema({
+    _id: String, // Allow custom string IDs
     userId: String,
     items: Array,
     subtotal: Number,

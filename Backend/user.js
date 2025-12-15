@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
+  _id: String, // Allow custom string IDs (e.g., 'u1')
   name: String,
   email: { type: String, unique: true },
   password: String,
