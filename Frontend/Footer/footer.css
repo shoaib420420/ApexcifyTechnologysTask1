@@ -1,0 +1,112 @@
+.footer {
+  margin-top: 30vh;
+  background-color: #343434;
+  color: white;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.footer h4 {
+  font-weight: bold;
+  padding-top: 80px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: start;
+  gap: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: start;
+  gap: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  /* display: block;
+  gap: 10px; */
+  margin-bottom: 3px;
+  transition: color 0.3s ease;
+}
+
+/* .footer a:hover {
+  color: skyblue;
+} */
+
+.subscribe-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #c4b9b9;
+  outline: none;
+  color: white;
+  padding: 8px 0;
+  width: 100%;
+  transition: border-bottom 0.3s ease;
+}
+
+.subscribe-input:focus {
+  border-bottom: 2px solid rgb(238, 244, 247);
+}
+
+.subscribe-input::placeholder {
+  color: rgb(146, 139, 139);
+}
+
+.hr {
+  width: 80%;
+  max-width: 100%;
+  margin: 2rem auto;
+  border: none;
+  border-top: 2px solid #999;
+}
+
+.footer-date {
+  width: 100%;
+  /* background-color: #f8f9fa;  */
+  color: white;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 70px;
+  /* border-top: 1px solid #ddd; */
+}
+
+@media (max-width: 576px) {
+  .footer-date {
+    font-size: 0.85rem;
+    padding: 1rem 0.5rem;
+  }
+}
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+
+  .footer .row>div {
+    margin-bottom: 30px;
+  }
+
+  .footer h4 {
+    font-size: 1.1rem;
+    justify-content: center;
+    /* text-align: center; */
+  }
+
+  .footer a {
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .subscribe-input {
+    width: 100%;
+    padding: 6px 0;
+  }
+}

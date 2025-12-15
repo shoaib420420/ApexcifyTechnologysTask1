@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Placed!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #10b981;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #4b5563;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: #2563eb;
+        }
+
+        .icon {
+            font-size: 60px;
+            color: #10b981;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="icon">&#10003;</div>
+        <h1>Order Placed!</h1>
+        <p>Your order has been successfully placed. You can view the status in your order history.</p>
+        <a href="Frontend/Customer/customer.html" class="btn">Return to Dashboard</a>
+    </div>
+    <script>
+        // Redirect after a few seconds optional, but button is better UX
+    </script>
+</body>
+
+</html>

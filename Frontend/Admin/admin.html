@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="adminstyle.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2 class="logo">Admin Panel</h2>
+        <ul class="menu">
+            <li onclick="loadPage('users')">User Control</li>
+            <li onclick="loadPage('products_control')">Product Control</li>
+            <li onclick="loadPage('orders_control')">Order Control</li>
+            <li onclick="loadPage('payments')">Payments</li>
+            <li onclick="loadPage('settings')">System Settings</li>
+        </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="content" id="content">
+        <h1>Welcome Admin</h1>
+        <p>Select an item from the menu.</p>
+    </div>
+
+
+
+    <div id="footer-container"></div>
+    <script src="../Footer/loadFooter.js"></script>
+    <script>
+        loadFooter('../Footer');
+    </script>
+    <script src="adminscript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Checkout</title>
+    <link rel="stylesheet" href="cartstyle.css">
+</head>
+
+<body>
+    <br>
+    <a href="shop.html">Shop Here</a>
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <div id="cartTotal"></div>
+
+    <hr />
+
+    <h2>Shipping Details:</h2>
+
+    <form id="checkoutForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="address" placeholder="Address" required>
+        <input type="text" id="city" placeholder="City" required>
+        <input type="text" id="phone" placeholder="Phone" required>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+
+    <script src="cart.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendorstyle.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2 class="logo">Vendor Panel</h2>
+    <ul class="menu">
+      <li onclick="showSection('dashboard')">Dashboard</li>
+      <li onclick="showSection('products')">My Products</li>
+      <li onclick="showSection('orders')">Orders</li>
+      <li onclick="showSection('payouts')">Payouts</li>
+      <li onclick="showSection('settings')">Settings</li>
+      <li>Logout</li>
+    </ul>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
+
+    <!-- Header -->
+    <h1 id="sectionTitle">Dashboard</h1>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="content-section">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>Total Products</h3>
+          <p id="totalProducts" class="text-primary">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>Total Orders</h3>
+          <p id="totalOrders" class="text-success">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>Total Earnings</h3>
+          <p id="totalEarnings" class="text-warning">$0</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="content-section hide">
+      <div class="card">
+        <div class="card-header">
+          <h2>My Products</h2>
+          <button class="btn btn-primary" onclick="addProduct()">+ Add New Product</button>
+        </div>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="productTable">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Orders Section -->
+    <section id="orders" class="content-section hide">
+      <div class="card">
+        <div class="card-header">
+          <h2>Customer Orders</h2>
+        </div>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Total Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payouts Section -->
+    <section id="payouts" class="content-section hide">
+      <div class="card">
+        <div class="card-header">
+          <h2>Payout History</h2>
+        </div>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Payout ID</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Settings Section -->
+    <section id="settings" class="content-section hide">
+      <div class="card">
+        <div class="card-header">
+          <h2>Vendor Settings</h2>
+        </div>
+        <div class="card-body">
+          <p>Edit profile, store info, etc.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div id="footer-container"></div>
+  <script src="../../Footer/loadFooter.js"></script>
+  <script>
+    loadFooter('../../Footer');
+  </script>
+  <script src="vendorscript.js"></script>
+</body>
+
+</html>

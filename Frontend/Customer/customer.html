@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="customerstyle.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2 class="logo">Customer Panel</h2>
+    <ul class="menu">
+      <li class="active" onclick="loadPage('shop')">Shop</li>
+      <li onclick="loadPage('cart')">Cart</li>
+      <li onclick="loadPage('checkout')">Checkout</li>
+      <li onclick="loadPage('orders')">Orders</li>
+    </ul>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content" id="content">
+    <!-- Pages will load here via main.js -->
+  </div>
+
+  <div id="footer-container"></div>
+  <script src="../Footer/loadFooter.js"></script>
+  <script>
+    loadFooter('../Footer');
+  </script>
+
+  <!-- SCRIPTS -->
+  <script src="main.js"></script>
+  <script src="shop.js"></script>
+  <script src="productDetails.js"></script>
+  <script src="cart.js"></script>
+  <script src="checkout.js"></script>
+  <script src="orders.js"></script>
+
+</body>
+
+</html>
