@@ -1,6 +1,6 @@
 # Multivendor E-commerce Platform
 
-A comprehensive multi-vendor e-commerce solution featuring a customer storefront, vendor dashboard, and admin panel.
+A comprehensive multi-vendor e-commerce solution featuring a customer storefront, vendor dashboard, and admin panel. You can check project in video through this link: https://drive.google.com/file/d/1bHxavnGoKbIzdRhdoXeUMkcfgD5x3kpA/view?usp=sharing
 
 ## 📋 Table of Contents
 - [Project Overview](#project-overview)
